@@ -21,8 +21,10 @@ Route::get('cadastro',function(){
         ["nome"=>"Rafa"]
     ]]);
 });
-
+Route::get('filme',"filmeController@create");
 Route::get('compras',"comprasController@index");
 Route::get('ator',"atorController@index");
 Route::get('ator/cadastro',"atorController@create");
+Route::get('ator/editar{id}',"atorController@ediatar");
 Route::post('ator/cadastro',"atorController@create");
+Route::post('ator/editar{id}',"atorController@ediatar");

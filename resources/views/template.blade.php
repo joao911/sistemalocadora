@@ -16,7 +16,9 @@
         @yield('container')
 
     </main>
-    
+    <main class="filme">
+    @yield('container')
+    </main>
     <footer>
         <h1>Rodape do site</h1>
     </footer>

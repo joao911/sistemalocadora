@@ -24,4 +24,14 @@ class AtorController extends Controller
         $resultado =$novoAtor->save();
         return view('cadastrarAtor',["resultado"=> $resultado]);
     }
+    public function ediar(Request $request, $id){
+        if($request->isMethod('GET')){
+            $ator = Ator::find($id);
+            return view('editarAtor',["ator"=>$ator]);
+        }
+        $ator = Ator::find($request->ator_id);
+        $ator->primeiro_nome = $request->primeiroNome;
+        $ator->ultimo_nome = $request->segundoNome;
+        $ator->save();
+    }
 }
