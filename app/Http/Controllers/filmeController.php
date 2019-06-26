@@ -23,4 +23,5 @@ class filmeController extends Controller
         $resultado = $filme->save();
         return view('editarFilme',['resultado'=>$resultado,'filme'=>$filme]);
     }
+    
 }

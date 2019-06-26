@@ -25,6 +25,7 @@ Route::get('filme',"filmeController@create");
 Route::get('filme/editar/{id}',"filmeController@editar");
 Route::post('filme/editar/{id}',"filmeController@editar");
 
+
 Route::get('compras',"comprasController@index");
 
 Route::get('ator',"atorController@index");
