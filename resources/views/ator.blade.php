@@ -3,7 +3,7 @@
 <h1>Atores</h1>
 <ul>
 @foreach($todosAtores as $ator)
-<li>{{ $ator->primeiro_nome }}<a href="ator/editar/{{$ator->ator_id}}"> <a>editar</a></li>
+<li>{{ $ator->primeiro_nome }}<a href="ator/editar/{{$ator->ator_id}}">editar</a></li>
 @endforeach
 </ul>
 @endsection

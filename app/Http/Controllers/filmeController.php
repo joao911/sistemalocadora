@@ -13,4 +13,14 @@ class filmeController extends Controller
             return view('filme',["todosFilmes"=>$todosFilmes]);
         }
     }
+    public function editar(Request $request,$id){
+        if($request->isMethod('GET')){
+            $filme = filme::find($id);
+            return view('editarfilme',["filme"=>$filme]);
+        }
+        $filme = filme::find($id);
+        $filme->titulo = $request->filmeTitulo;
+        $resultado = $filme->save();
+        return view('editarFilme',['resultado'=>$resultado,'filme'=>$filme]);
+    }
 }

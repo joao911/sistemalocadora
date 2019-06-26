@@ -22,9 +22,13 @@ Route::get('cadastro',function(){
     ]]);
 });
 Route::get('filme',"filmeController@create");
+Route::get('filme/editar/{id}',"filmeController@editar");
+Route::post('filme/editar/{id}',"filmeController@editar");
+
 Route::get('compras',"comprasController@index");
+
 Route::get('ator',"atorController@index");
 Route::get('ator/cadastro',"atorController@create");
-Route::get('ator/editar{id}',"atorController@ediatar");
 Route::post('ator/cadastro',"atorController@create");
-Route::post('ator/editar{id}',"atorController@ediatar");
+Route::get('ator/editar/{id}',"atorController@editar");
+Route::post('ator/editar/{id}',"atorController@editar");
